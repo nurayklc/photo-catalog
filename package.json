@@ -1,0 +1,27 @@
+{
+  "name": "photo-catalog",
+  "version": "1.0.0",
+  "description": "PCAT Photo Catalog App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurayklc/photo-catalog.git"
+  },
+  "keywords": [
+    "photo",
+    "catalog",
+    "app"
+  ],
+  "author": "Nuray KILIÇ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nurayklc/photo-catalog/issues"
+  },
+  "homepage": "https://github.com/nurayklc/photo-catalog#readme",
+  "devDependencies": {
+    "prettier": "2.5.1"
+  }
+}
