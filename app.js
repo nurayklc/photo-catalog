@@ -17,8 +17,11 @@ app.use(express.urlencoded({extended:true})) // urlden gelen dataları alır.
 app.use(express.json()) // dataları json yapısına çevirir.
 
 // ROUTERING
-app.get('/', (req, res) => {
-  res.render('index');
+app.get('/', async (req, res) => {
+  const photos = await Photo.find({})
+  res.render('index', {
+    photos
+  });
 });
 app.get('/about', (req, res) => {
   res.render('about');
