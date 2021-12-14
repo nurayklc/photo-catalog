@@ -19,7 +19,9 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true })); // urlden gelen dataları alır.
 app.use(express.json()); // dataları json yapısına çevirir.
 app.use(fileUpload());
-app.use(methodOverride('_method'));
+app.use(methodOverride('_method',{
+  methods:['POST', 'GET']
+}));
 
 // ROUTERING
 app.get('/', async (req, res) => {
@@ -69,6 +71,14 @@ app.put('/photo/:id', async (req, res) => {
   photo.description = req.body.description;
   photo.save();
   res.redirect(`/photo/${req.params.id}`);
+});
+
+app.delete('/photo/:id', async (req, res) => {
+  const photo = await Photo.findOne({ _id: req.params.id });
+  let deletedImage = __dirname +'/public'+photo.image
+  fs.unlinkSync(deletedImage)
+  await Photo.findByIdAndDelete(req.params.id)
+  res.redirect('/');
 });
 
 const port = 3000;
