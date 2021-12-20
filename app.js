@@ -9,8 +9,10 @@ const pageController = require('./controllers/pageControllers');
 const app = express();
 
 // Connect Db
-mongoose.connect('mongodb://localhost/photo-catalog');
-
+mongoose.connect('mongodb+srv://nuray:UYAaWLrr3%23%237$te@cluster0.mxvqu.mongodb.net/photo-catalog?retryWrites=true&w=majority')
+.then(() =>{
+  console.log('DB Connected!')
+})
 // TEMPLATE ENGINE
 app.set('view engine', 'ejs');
 
@@ -36,7 +38,7 @@ app.get('/about', pageController.getAboutPage);
 app.get('/addPhoto', pageController.getAddPage);
 app.get('/photo/edit/:id', pageController.getEditPage);
 
-const port = 3000;
+const port = process.env.port || 5000;
 
 app.listen(port, () => {
   console.log(`Sunucu port ${port} da çalışıyor.`);
