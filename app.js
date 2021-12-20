@@ -38,7 +38,7 @@ app.get('/about', pageController.getAboutPage);
 app.get('/addPhoto', pageController.getAddPage);
 app.get('/photo/edit/:id', pageController.getEditPage);
 
-const port = process.env.port || 5000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
   console.log(`Sunucu port ${port} da çalışıyor.`);
