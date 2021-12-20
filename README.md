@@ -18,5 +18,5 @@
 - Atlas MongoDB cloud
 - Heroku Deployment
 
-#### Photo Catalog Preview
-![](photo-catalog.mp4)
+### Photo Catalog Preview
+![](Photo-Catalog.gif)
