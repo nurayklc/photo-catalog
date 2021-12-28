@@ -1,20 +1,20 @@
 # Photo Catalog 
 ---
-<a href="https://photo-catalog-app.herokuapp.com/">Photo Catalog Projesi için tıklayınız..</a>
+<a href="https://photo-catalog-app.herokuapp.com/">Click for Photo Catalog Project</a>
 
-#### Projede Kullanılan Teknolojiler
+#### Used Techs
 ---
 - Prettier 
 - Nodemon
-- Statik Dosyalar
+- Statik Files
 - Template Engine
-- Middleware Kavramı 
+- Middleware  
 - Express
 - MongoDB
 - Mongoose
 - CRUD
-- MVC Yapısı
-- Pagination (Sayfalama)
+- MVC 
+- Pagination
 - Atlas MongoDB cloud
 - Heroku Deployment
 
